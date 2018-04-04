@@ -26,10 +26,6 @@ ADD munki-repo.conf /etc/nginx/sites-enabled/
 ADD start.sh /start.sh
 RUN chmod +x /start.sh
 
-# Set up logs
-RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
-	ln -sf /dev/stderr /var/log/nginx/error.log
-
 # Expose volumes
 VOLUME ["/munki_repo"]
 
