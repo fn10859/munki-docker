@@ -29,6 +29,3 @@ VOLUME ["/munki_repo"]
 
 # Expose ports
 EXPOSE 80 443
-
-# Lets go!
-CMD ["/start.sh"]
