@@ -20,10 +20,6 @@ RUN mkdir -p /munki_repo && \
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD munki-repo.conf /etc/nginx/sites-enabled/
 
-# Add start up script
-ADD start.sh /start.sh
-RUN chmod +x /start.sh
-
 # Expose volumes
 VOLUME ["/munki_repo"]
 
