@@ -7,9 +7,7 @@ FROM debian:8-slim
 MAINTAINER Steve Küng (steve.kueng@gmail.com)
 
 # Add the packages we need from apt then remove the cached list saving some disk space
-RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 && \
-	echo "deb http://nginx.org/packages/mainline/debian/ jessie nginx" >> /etc/apt/sources.list && \
-	apt-get update && \ 
+RUN apt-get update && \ 
 	apt-get install -y nginx && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
