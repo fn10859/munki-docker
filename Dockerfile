@@ -7,7 +7,7 @@ FROM nginx
 MAINTAINER Steve Küng (steve.kueng@gmail.com)
 
 # Create dirs for Munki
-RUN mkdir -p /macosrepo && \
+RUN mkdir -p /macosrepo/ && \
 	mkdir -p /etc/nginx/sites-enabled/
 
 # Add Munki config files
@@ -15,7 +15,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY munki-repo.conf /etc/nginx/sites-enabled/
 
 # Expose volumes
-VOLUME ["/macosrepo"]
+VOLUME ["/]
 
 # Expose ports
 EXPOSE 80 443
