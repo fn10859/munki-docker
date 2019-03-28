@@ -15,7 +15,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY munki-repo.conf /etc/nginx/sites-enabled/
 
 # Expose volumes
-VOLUME ["/]
+VOLUME ["/macosrepo"]
 
 # Expose ports
 EXPOSE 80 443
